@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 .primary-btn {
@@ -29,13 +30,24 @@ body {
 }
 
 .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+}
+
+.section-title span {
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.3rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    margin: 4rem 6rem;
 }
 
 .section-description {
@@ -168,10 +180,10 @@ body {
     padding: 2rem 6rem;
 }
 
-.gamer-section > div {
+.gamer-section>div {
     width: 50%;
 }
-  
+
 .gamer-image {
     width: 100%;
 }
@@ -201,67 +213,172 @@ body {
     font-weight: 700;
 }
 
+.online-games {
+    max-width: 85%;
+    margin: 4rem auto;
+}
+
+.card-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.card-item {
+    position: relative;
+    transition: .3s ease-in-out;
+}
+
+.card-item img {
+    max-width: 100%;
+}
+
+.card-hover {
+    background: linear-gradient(#000000e1, #000000c7);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 78.5%;
+    flex-direction: column;
+    border-radius: .75rem;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.card-hover p {
+    background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: .5rem;
+}
+
+.card-item:hover .card-hover {
+    opacity: 1;
+}
+
+.card-description {
+    color: #534C64;
+    margin-top: 1rem;
+}
+
 /* Media Queries for mobile devices */
 @media screen and (max-width: 576px) {
-    .navbar-container, .nav-menu {
+    .container {
+        margin: 4rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-title span {
+        font-size: 2.5rem;
+    }
+
+    .navbar-container,
+    .nav-menu {
         flex-direction: column;
     }
+
     .navbar-container {
         justify-content: center;
         align-items: center;
         box-shadow: none;
         padding: 1rem 0;
     }
+
     .nav-menu {
         margin-top: 1rem;
     }
+
     .banner-container {
         flex-direction: column-reverse;
         width: 100%;
     }
-    .banner-container > div {
+
+    .banner-container>div {
         width: 100%;
     }
+
     .banner-content {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         padding: 2rem 0;
-        margin-left: 1.5rem;
     }
+
     .banner-title {
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
+
     .banner-title span {
         font-size: 2.5rem;
     }
+
     .banner-description-list li {
         font-size: 1rem;
     }
+
     .banner-buttons {
         margin: 1rem 0;
         gap: 1rem;
     }
+
     .banner-image {
         width: 100%;
         margin: 0 1.5rem;
     }
+
     .banner-image img {
         max-width: 90%;
     }
+
     .gamer-section {
         padding: 1rem;
         flex-direction: column;
         width: 100%;
         background: none;
     }
-    .gamer-section > div {
+
+    .gamer-section>div {
         width: 100%;
     }
+
     .gamer-section-content {
         text-align: center;
         padding: 1rem;
+    }
+
+    .online-games {
+        padding-left: 2rem;
+    }
+
+    .card-items {
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .card-item {
+        width: 100%;
+    }
+
+    .card-item img {
+        margin: 0 auto;
+    }
+
+    .card-hover {
+        height: 85%;
+    }
+
+    .main {
+        height: 89%;
     }
 }
