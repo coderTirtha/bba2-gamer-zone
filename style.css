@@ -512,7 +512,7 @@ footer {
     }
 
     .banner-image {
-        width: 100%;
+        width: 95%;
         margin: 0 1.5rem;
     }
 
@@ -529,6 +529,14 @@ footer {
 
     .gamer-section>div {
         width: 100%;
+    }
+
+    .gamer-image {
+        width: 95%;
+    }
+    
+    .gamer-image img {
+        max-width: 100%;
     }
 
     .gamer-section-content {
@@ -591,7 +599,14 @@ footer {
         max-width: 30%;
     }
 
-    #careers-section>div {
+    .careers-section {
+        margin: 4rem auto;
+        max-width: 100%;
+        padding-right: 1rem;
+    }
+
+
+    .careers-section>div {
         width: 100%;
     }
 
